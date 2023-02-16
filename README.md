@@ -9,6 +9,7 @@ We present an AI chat approach with spec.Deep neural networks built on a generat
 
 We present a AI spec for chat generative token -prompts to market fit with dedicated software.
 
+https://i.ibb.co/FWCcY91/Captura-de-Pantalla-2023-02-16-a-la-s-13-20-02.png
 ## Contents 
 
 [] LMS Learning Model (wizard - auto no clone)
