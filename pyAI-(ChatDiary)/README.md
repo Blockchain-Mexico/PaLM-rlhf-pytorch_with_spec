@@ -17,6 +17,9 @@ https://github.com/lizihan97/BPE
 
 Gauss
 x
+### Reasearch in model of LMs
+https://github.com/legacyai/tf-transformers/tree/main/research
+
 Papers of variants
 
 https://arxiv.org/pdf/1810.04805.pdf

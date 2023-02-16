@@ -22,6 +22,8 @@ We present a AI spec for chat generative token -prompts to market fit with dedic
 [] frameworks methods 
 [] Paralellism exectuions of the methods 
 [] JSON serialization with out node js 
+[] RPC to a onDemand https://pytorch.org/docs/stable/rpc/rref.html#design-reasoning
+
 
 
 ## Specs 
@@ -86,7 +88,7 @@ https://arxiv.org/pdf/2204.05862.pdf
 ## Architectures
 
 http://nlp.seas.harvard.edu/annotated-transformer/
-
+https://github.com/legacyai/tf-transformers#supported-models-architectures
 
 
 <img src="./chatgpt.png" width="450px"></img>
