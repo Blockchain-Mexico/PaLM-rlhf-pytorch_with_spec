@@ -9,7 +9,8 @@ We present an AI chat approach with spec.Deep neural networks built on a generat
 
 We present a AI spec for chat generative token -prompts to market fit with dedicated software.
 
-https://i.ibb.co/FWCcY91/Captura-de-Pantalla-2023-02-16-a-la-s-13-20-02.png
+![alt text](https://i.ibb.co/FWCcY91/Captura-de-Pantalla-2023-02-16-a-la-s-13-20-02.png)
+
 ## Contents 
 
 [] LMS Learning Model (wizard - auto no clone)
@@ -57,7 +58,13 @@ recomendations in spec prompts
 - any attention chat
 - recommendations chats 
 - automatics node js contructions MVPs
-- 
+- automatic post and shares in any social media.
+
+### Botlenecks
+
+Large prompt and answers
+Fast writing a pre processing
+
 # References 
 
 https://github.com/dair-ai/Prompt-Engineering-Guide/blob/main/guides/prompts-intro.md
