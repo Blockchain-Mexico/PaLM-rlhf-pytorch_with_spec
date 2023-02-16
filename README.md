@@ -1,3 +1,86 @@
+Prompt -AI
+
+### Introduction
+
+We present an AI chat approach with spec.Deep neural networks built on a generative model of tokens.
+
+
+## Description
+
+We present a AI spec for chat generative token -prompts to market fit with dedicated software.
+
+## Contents 
+
+[] LMS Learning Model (wizard - auto no clone)
+[] Prompt injection
+[] Web 2 - 3 
+[] encoder-decoder structure
+[] Tokenize optimized
+[] Feedback learning
+[] frameworks methods 
+[] Paralellism exectuions of the methods 
+[] JSON serialization with out node js 
+
+
+## Specs 
+    
+def openai_create(prompt):
+
+    response = openai.Completion.create(
+    model="text-davinci-003",
+    prompt=prompt,
+    temperature=0.9,
+    max_tokens=150,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0.6,
+    stop=[" Human:", " AI:"]
+    )
+
+    return response.choices[0].text
+
+
+
+### Roadmap
+
+any x prompt is a y bussines in attention
+ideas: 
+
+diary chat -- company
+recomendations in spec prompts 
+
+
+### Hackathon ideas
+
+- videogame copilot missions
+- any attention chat
+- recommendations chats 
+- automatics node js contructions MVPs
+- 
+# References 
+
+https://github.com/dair-ai/Prompt-Engineering-Guide/blob/main/guides/prompts-intro.md
+https://github.com/agencyenterprise/PromptInject
+
+## Alternatives
+
+https://github.com/LAION-AI/Open-Assistant
+https://github.com/gofireflyio/aiac
+
+## Frameworks
+
+https://github.com/deepset-ai/haystack
+
+## Academics
+
+https://arxiv.org/pdf/2204.05862.pdf
+
+## Architectures
+
+http://nlp.seas.harvard.edu/annotated-transformer/
+
+
+
 <img src="./chatgpt.png" width="450px"></img>
 
 *<a href="https://openai.com/blog/chatgpt/">official chatgpt blogpost</a>*
