@@ -44,7 +44,10 @@ def openai_create(prompt):
     return response.choices[0].text
 
 
+### Workflow
 
+https://archive.vn/20221228120815/https://twitter.com/iScienceLuvr/status/1608070009921900546
+https://github.com/carperai/trlx
 ### Roadmap
 
 any x prompt is a y bussines in attention

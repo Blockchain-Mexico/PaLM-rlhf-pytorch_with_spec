@@ -31,3 +31,7 @@ alpha-5: Putting a simple and efficient story around multi-machine training. Pro
 
 
 
+### Math
+
+https://arxiv.org/pdf/1909.00599.pdf
+
