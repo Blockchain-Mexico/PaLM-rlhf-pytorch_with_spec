@@ -54,6 +54,9 @@ Just to clarify, the code snippet you provided earlier was an example of how to 
 In contrast, TrueGPT is an artificial intelligence language model developed by OpenAI that can generate human-like text in response to a given prompt.
 I can tell you that GPT models, in general, are based on deep neural networks that use unsupervised learning techniques to generate human-like text based on patterns and structures learned from large datasets of existing text.
 Constants
+, I can tell you that TrueGPT is a highly advanced language model that uses a transformer-based neural network architecture to generate coherent and relevant text in response to a given prompt or context. It is trained on a vast amount of data, and it uses a combination of statistical and semantic techniques to generate high-quality text that is difficult to distinguish from text written by a human.
+
+Recursion of non-trvial - trival...
 
 |     |     |     |     |
 |-----|-----|-----|-----|
