@@ -75,6 +75,28 @@ self.hidden_size = hidden_size
         for embedding in embedded_inputs:
             self.hidden
 
+import requests
+
+# Collect data from Twitter
+twitter_data = []
+response = requests.get('https://api.twitter.com/1.1/search/tweets.json?q=sentiment%20analysis')
+if response.status_code == 200:
+data = response.json()
+for tweet in data['statuses']:
+twitter_data.append(tweet['text'])
+
+# Collect data from news articles
+news_data = []
+response = requests.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=YOUR_API_KEY')
+if response.status_code == 200:
+data = response.json()
+for article in data['articles']:
+news_data.append(article['title'])
+
+# Save collected data to a file
+with open('data.txt', 'w') as f:
+for text in twitter_data + news_data:
+f.write(text + '\n')
 
 
 RNN architecture: Define the architecture of the RNN, including the number and type of layers (e.g., LSTM, GRU), the number of hidden units, and the initialization of the weights.
