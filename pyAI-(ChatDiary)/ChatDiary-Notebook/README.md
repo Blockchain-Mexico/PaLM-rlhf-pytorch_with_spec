@@ -1,4 +1,4 @@
-# ChatDiary
+# ChatDiary 
 
 [[Blog]](https://openai.com/blog/clip/) [[Paper]](https://arxiv.org/abs/2103.00020) [[Model Card]](model-card.md) [[Colab]](https://colab.research.google.com/github/openai/clip/blob/master/notebooks/Interacting_with_CLIP.ipynb)
 
@@ -13,6 +13,12 @@ The description is recreated a friend or a relationship chat for the user. (her 
 ## Workflow with framework
 
 ![alt text](https://i.ibb.co/wyMGzgm/Captura-de-Pantalla-2023-02-17-a-la-s-14-48-56.png)
+
+## Dedicated software 
+
+Learning curve of datasets
+Gap - Production Code 
+
 
 
 ## Usage
