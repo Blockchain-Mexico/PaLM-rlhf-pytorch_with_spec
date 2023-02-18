@@ -4,6 +4,20 @@ https://i.ibb.co/3pzR1BQ/Captura-de-Pantalla-2023-02-17-a-la-s-20-18-13.png
 
 will depend on the specific requirements and constraints of your application.
 
+## Description
+
+high-level overview of how such a system might be structured:
+
+Input data: The system would take in some input data, which could be in the form of text, audio, or video.
+
+Tokenization: The input data would be tokenized using custom hardware designed to efficiently perform text processing tasks such as text segmentation, word tokenization, and part-of-speech tagging.
+
+Encoding: The tokenized data would then be encoded using custom hardware designed to perform high-speed numerical computations, such as matrix multiplication and convolution.
+
+Decoding: The encoded data would be passed through a decoder, which would use custom hardware to reverse the encoding process and output the final result.
+
+Custom engine: The entire system would be powered by a custom engine, which would coordinate the different hardware components and perform optimizations such as pipelining and parallel processing to maximize performance
+
 ## Hardware design 
 
 Hardware description language: The hardware design needs to be implemented using hardware description languages such as VHDL or Verilog. This involves writing code that describes the functionality and behavior of the hardware.
