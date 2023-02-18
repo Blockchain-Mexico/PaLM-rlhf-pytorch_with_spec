@@ -327,6 +327,8 @@ compiler.compile("some source code");
 return 0;
 }
 
+Decentralizing the HDL compiler could involve breaking it down into smaller, more specialized components that can run on separate devices or nodes in a distributed network
+
 ## Engine
 
 Using a custom engine can give you more control over the tokenization process, and can be especially useful for languages or domains that require specialized tokenization rules or algorithms
