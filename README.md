@@ -4,6 +4,11 @@ Prompt -AI
 
 We present an AI chat approach with spec.Deep neural networks built on a generative model of tokens.
 
+## Quality Code 
+
+With framework 5 - 10 (open source pythorch- tensorflow any x frame)
+With python - c++ 7 - 10 (pythorcg)
+With hardware and software (VDHL module in custom engines for tokenizer) 9 - 10 (closed source)
 
 ## Description
 
