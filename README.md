@@ -7,8 +7,9 @@ We present an AI chat approach with spec.Deep neural networks built on a generat
 ## Quality Code 
 
 With framework 5 - 10 (open source pythorch- tensorflow any x frame)
-With python - c++ 7 - 10 (pythorcg)
+With python - c++ 7 - 10 (pythorch)
 With hardware and software (VDHL module in custom engines for tokenizer) 9 - 10 (closed source)
+With a new specific language compiler with a specific method to the end o serialization
 
 ## Description
 
@@ -18,13 +19,16 @@ We present a AI spec for chat generative token -prompts to market fit with dedic
 
 ## Contents 
 
-[] LMS Learning Model (wizard - auto no clone)
-[] Prompt injection
-[] Web 2 - 3 
-[] encoder-decoder structure
-[] Tokenize optimized
-[] Feedback learning
-[] frameworks methods 
+| [] | LMS Learning Model (wizard - auto no clone) |
+|----|---------------------------------------------|
+|    |      Prompt injection                                       |
+|    |          Web 2 - 3                                    |
+|    |                encoder-decoder structure                             |
+|    |          Tokenize optimized                                   |
+|    |              Feedback learning                               |
+|    |                                             |
+
+
 [] Paralellism exectuions of the methods 
 [] JSON serialization with out node js 
 [] RPC to a onDemand https://pytorch.org/docs/stable/rpc/rref.html#design-reasoning
