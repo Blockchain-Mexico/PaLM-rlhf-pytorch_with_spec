@@ -10,3 +10,9 @@ In this example, we generate a response to the prompt "What is the meaning of li
 is generated using the Davinci engine or any other engine. My responses are generated based on the information and instructions given in the prompt or the context of the conversation.
 
 The choice to use the Davinci engine may depend on factors such as the complexity of the task, the amount of training data available, and the computing resources required to run the model.
+
+
+## References
+
+https://sci-hub.ru/https://doi.org/10.1145/3434237
+
