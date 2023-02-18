@@ -1,3 +1,23 @@
+# Policy
+
+## Description 
+
+Policy: The policy is a function that maps states to actions. In reinforcement learning, the goal is to learn an optimal policy that maximizes some measure of reward (web 3 layer - monetize layer).
+``` 
+import random
+
+def policy(state, q_table):
+    # select an action based on the current state
+    q_values = q_table[state]
+    max_q = max(q_values)
+    actions = [action for action, value in enumerate(q_values) if value == max_q]
+    action = random.choice(actions)
+    return action
+
+
+```
+
+
 TrueGPT is an artificial intelligence language model developed by OpenAI. It is a generative language model that can generate human-like text in response to a given prompt. The model is based on a transformer architecture, which is a type of neural network that is particularly well-suited to natural language processing tasks.
 
 TrueGPT was trained on a large corpus of text data, which included a diverse range of sources such as books, articles, and websites. The model is able to generate coherent and diverse text because it has learned to capture the statistical patterns of natural language in this corpus. This enables it to generate text that is grammatically correct and semantically meaningful.

@@ -1,8 +1,24 @@
-https://i.ibb.co/3pzR1BQ/Captura-de-Pantalla-2023-02-17-a-la-s-20-18-13.png
+# Desing Rationale
+
 
 ### Principles 
 
+Scalabilty:
+
+Matching efficient
+
+
+
 will depend on the specific requirements and constraints of your application.
+
+
+# Analog 
+
+Numpy arrays a q tables are fast. -> recreate in VHDL hardware desing.
+
+# Math
+
+![alt text](https://i.ibb.co/3pzR1BQ/Captura-de-Pantalla-2023-02-17-a-la-s-20-18-13.png)
 
 ## Description
 
@@ -22,6 +38,9 @@ Custom engine: The entire system would be powered by a custom engine, which woul
 
 Hardware description language: The hardware design needs to be implemented using hardware description languages such as VHDL or Verilog. This involves writing code that describes the functionality and behavior of the hardware.
 
+```
+
+```
 
 module tokenizer(
 input clk,         // clock signal
