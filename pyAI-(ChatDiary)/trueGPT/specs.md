@@ -98,6 +98,37 @@ with open('data.txt', 'w') as f:
 for text in twitter_data + news_data:
 f.write(text + '\n')
 
+Prompt leak 
+
+# Define a function to generate text
+def generate_text(prompt):
+# Use TrueGPT to generate text based on the prompt
+generated_text = truegpt.generate(prompt)
+
+    # Post-process the generated text, for example by removing any inappropriate language or sensitive information
+    # ...
+    
+    # Return the generated text
+    return generated_text
+
+# Define a main function to run the program
+def main():
+# Collect and preprocess data
+data_dir = "data"
+data = collect_data(data_dir)
+preprocessed_data = preprocess_data(data)
+
+    # Prompt the user for input and generate text based on the prompt
+    while True:
+        prompt = input("Enter a prompt or type 'exit' to quit: ")
+        if prompt.lower() == "exit":
+            break
+        generated_text = generate_text(prompt)
+        print(generated_text)
+
+# Call the main function to start the program
+main()
+
 
 RNN architecture: Define the architecture of the RNN, including the number and type of layers (e.g., LSTM, GRU), the number of hidden units, and the initialization of the weights.
 
