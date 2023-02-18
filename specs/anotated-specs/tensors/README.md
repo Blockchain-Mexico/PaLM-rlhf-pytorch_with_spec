@@ -34,6 +34,12 @@ Work flow
 
 Tensor -> Deconde - endode strings ->  ApiTensor 
 
+## Models in research:
+ 
+
+## Tensorflow
+https://github.com/openai/CLIP-featurevis/blob/master/tokenizer.py
+
 
 
 Types

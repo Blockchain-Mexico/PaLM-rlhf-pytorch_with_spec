@@ -48,6 +48,12 @@ def openai_create(prompt):
 
 https://archive.vn/20221228120815/https://twitter.com/iScienceLuvr/status/1608070009921900546
 https://github.com/carperai/trlx
+
+### Engineering 
+
+https://github.com/SE-ML/awesome-seml
+
+
 ### Roadmap
 
 any x prompt is a y bussines in attention
