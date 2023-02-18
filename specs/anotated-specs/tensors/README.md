@@ -51,7 +51,7 @@ This accesses the element at index 0 of the outer list (the first matrix), index
 # Policy Tensor 
 
 Just to clarify, the code snippet you provided earlier was an example of how to create a tensor without using NumPy or TrueGPT. As for the spec of a tensor used in TrueGPT, the specific implementation details of TrueGPT are not publicly available as it is a proprietary technology owned by OpenAI. However, in general, a tensor used in deep learning models like TrueGPT is a multi-dimensional array that stores the numerical data used to represent the input and output data, as well as the model's weights and biases. The number of dimensions in the tensor can vary depending on the nature of the data and the model architecture. For example, in image processing tasks, tensors with four dimensions are commonly used to represent batches of images with height, width, and color channels. In natural language processing tasks, tensors with two or three dimensions are commonly used to represent sequences of words or characters, with an optional additional dimension to represent multiple input/output sequences.
-
+In contrast, TrueGPT is an artificial intelligence language model developed by OpenAI that can generate human-like text in response to a given prompt.
 
 Constants
 
