@@ -390,6 +390,10 @@ Deploy the system: Once the system has been optimized and tested, it can be depl
 
 In terms of the tokenization process, the FPGA-based accelerator can take in the input text, tokenize it and produce the token to ID mappings and the sequence of token IDs. The software stack can then use the hardware accelerator to perform the tokenization and produce the required outputs.
 
+## References:
+
+https://sci-hub.ru/https://ieeexplore.ieee.org/abstract/document/8693206
+
 
 
 ## Decorder - Encoder
