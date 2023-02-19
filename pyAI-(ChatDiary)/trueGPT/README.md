@@ -12,6 +12,40 @@ TrueGPT is available through the OpenAI API, which allows developers to easily i
 
 In summary, TrueGPT is a powerful language model that can generate human-like text and is highly flexible and customizable. It is based on the Transformer architecture and is pre-trained on a large corpus of text data, making it a versatile tool for a wide range of natural language processing tasks.
 
+TrueGPT-PaLM-rlhf-pytorch
+This repository contains the implementation of TrueGPT-PaLM-rlhf, a pre-trained language model for generating coherent and realistic text using PyTorch. The model was pre-trained on a large corpus of text and can be fine-tuned on specific tasks or domains.
+
+Installation
+To use TrueGPT-PaLM-rlhf-pytorch, you will need to install PyTorch and other dependencies. You can do this by running the following command:
+
+Copy code
+pip install -r requirements.txt
+Usage
+The main script for using TrueGPT-PaLM-rlhf-pytorch is generate.py. This script generates text based on a prompt provided by the user. To generate text, run the following command:
+
+css
+Copy code
+python generate.py --model [path_to_pretrained_model] --prompt [text_prompt] --length [length_of_generated_text] --temperature [temperature_for_sampling] --num_samples [number_of_samples]
+Training
+To train TrueGPT-PaLM-rlhf-pytorch on your own corpus of text, you will need to create a text file with one sentence per line. You can then run the following command:
+
+css
+Copy code
+python train.py --data [path_to_text_file] --save [path_to_save_model] --num_epochs [number_of_epochs_to_train] --batch_size [batch_size_for_training] --seq_length [sequence_length_for_training]
+Pretrained models
+The repository includes several pretrained models that can be used for text generation. These models were trained on a variety of corpora and can be fine-tuned on specific tasks or domains. The models are available for download in the pretrained_models directory.
+
+Evaluation
+The evaluate.py script can be used to evaluate the quality of the generated text. The script calculates several metrics, including perplexity and coherence, and outputs the results in a text file.
+
+Citation
+If you use TrueGPT-PaLM-rlhf-pytorch in your research, please cite the following paper:
+
+csharp
+Copy code
+[insert citation here]
+That's a basic overview of the TrueGPT-PaLM-rlhf-pytorch repository. Let me know if you need more information or if there's anything else I can help you with!
+
 TROLL MODE:
 
 Documentation for TrueGPT:
