@@ -1,4 +1,8 @@
 
+## Reality
+
+This is how the code is really looks like:
+https://labs.openai.com/e/y8losgb5ikuzPT9XMqJOt9Me/Xq19NMhbE3jJYHjMumScOiLj
 
 
 The code defines a class called Model, which is the main component of the GPT-2 model. The Model class contains several layers that are used to process and transform the input text data. The Block class represents the core of the GPT-2 model, and it contains the attention mechanism, which allows the model to attend to relevant parts of the input sequence. The Attention class is used to compute the attention scores between the query and key vectors.
