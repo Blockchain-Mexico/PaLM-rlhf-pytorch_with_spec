@@ -4,6 +4,9 @@
 
 We present an AI chat approach with spec.Deep neural networks built on a generative model of tokens.
 
+## AI sessions (is like this https://labs.openai.com/e/y8losgb5ikuzPT9XMqJOt9Me/Xq19NMhbE3jJYHjMumScOiLj no reality just miopa code...)
+
+18/02/2023 https://chat.openai.com/chat/7423b652-95e1-45e5-aaf5-d67ccfaa06b4
 
 ## Quality Code 
 
