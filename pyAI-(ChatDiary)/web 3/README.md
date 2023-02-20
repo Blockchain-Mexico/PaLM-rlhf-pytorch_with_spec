@@ -168,7 +168,29 @@ contract ExampleContract is IPFSStorage {
 }
 
 ```
+```python 
+pragma solidity ^0.8.0;
 
+contract SpamDetection {
+    function calculatePolicy(uint[] memory features, uint[] memory weights) public view returns (uint8) {
+        require(features.length == weights.length, "Features and weights must be of equal length");
+
+        // Compute the dot product of features and weights
+        uint dotProduct = 0;
+        for (uint i = 0; i < features.length; i++) {
+            dotProduct += features[i] * weights[i];
+        }
+
+        // Apply a threshold to the dot product to determine if the message is spam
+        if (dotProduct > 10) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+}
+
+```
 ## Metadata GPT
 
 
