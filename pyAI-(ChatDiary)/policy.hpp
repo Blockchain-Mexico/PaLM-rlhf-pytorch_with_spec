@@ -16,9 +16,15 @@ int policy(const std::vector<double>& q_values, double temperature) {
     std::transform(scaled_q_values.begin(), scaled_q_values.end(), probabilities.begin(),
                    [=](double x) { return x / total; });
 
-    // Select an action based on the probabilities
+    // Compute the CDF of the probabilities
+    std::vector<double> cdf(probabilities.size());
+    std::partial_sum(probabilities.begin(), probabilities.end(), cdf.begin());
+
+    // Select an action based on the CDF
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::discrete_distribution<> dist(probabilities.begin(), probabilities.end());
-    return dist(gen);
+    std::uniform_real_distribution<> unif(0.0, 1.0);
+    double rand_val = unif(gen);
+    auto it = std::lower_bound(cdf.begin(), cdf.end(), rand_val);
+    return std::distance(cdf.begin(), it);
 }
