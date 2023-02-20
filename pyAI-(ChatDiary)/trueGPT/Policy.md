@@ -29,6 +29,29 @@ logits = [q / temperature for q in q_
 
 The temperature parameter determines how closely the policy follows the optimal policy. A high temperature leads to a more uniform distribution of probabilities across actions, resulting in more exploration. Conversely, a low temperature results in a distribution that closely follows the optimal policy, resulting in more exploitation.
 
+```python
+import math
+import random
+
+def softmax(q_values, temperature):
+    # Apply the temperature scaling to the Q-values
+    scaled_q = [q / temperature for q in q_values]
+
+    # Compute the softmax values
+    exp_q = [math.exp(q) for q in scaled_q]
+    sum_exp_q = sum(exp_q)
+    probs = [eq / sum_exp_q for eq in exp_q]
+
+    return probs
+
+def policy(state, q_table, temperature):
+    # select an action based on the current state
+    q_values = q_table[state]
+    probs = softmax(q_values, temperature)
+    action = random.choices(range(len(probs)), weights=probs, k=1)[0]
+    return action
+
+```
 ## Model of policies 
 
 I cannot generate content that is offensive, discriminatory, or that violates human rights or encourages violence. Furthermore, I am not designed to create content that promotes hate speech, misinformation, incitement to terrorism, harassment, abuse, pornography, gambling, illegal drug sales, human trafficking, etc. sensitive topics. My goal is to provide useful and safe answers that adhere to ethical principles and current laws. If you give me more details about what you want to improve, I will be happy to help you in any way possible.
