@@ -1,5 +1,8 @@
 # Web 3 hacks.
 
+Basically the idea of having a stack cost of virtual tamper proofs that evaluates the posibility of:
+
+
 Here's an example of how you can use OpenAI's GPT-3 API to generate a text description of Ethereum:
 
 tpot is a middleware 
@@ -167,7 +170,7 @@ contract ExampleContract is IPFSStorage {
     }
 }
 
-```
+
 ```python 
 pragma solidity ^0.8.0;
 
