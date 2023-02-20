@@ -8,7 +8,9 @@ We present an AI chat approach with spec.Deep neural networks built on a generat
 
 18/02/2023 https://chat.openai.com/chat/7423b652-95e1-45e5-aaf5-d67ccfaa06b4
 
-## Quality Code 
+## Quality Code
+
+Disclaimer: the AI session was with a CHATGPT very small 
 
 With framework 5 - 10 (open source pythorch- tensorflow any x frame)
 With python - c++ 7 - 10 (pythorch)
