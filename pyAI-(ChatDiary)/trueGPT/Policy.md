@@ -16,6 +16,18 @@ def policy(state, q_table):
 
 
 ```
+``
+import random
+import math
+
+def policy(state, q_table, temperature):
+# select an action based on the current state
+q_values = q_table[state]
+logits = [q / temperature for q in q_
+
+``
+
+The temperature parameter determines how closely the policy follows the optimal policy. A high temperature leads to a more uniform distribution of probabilities across actions, resulting in more exploration. Conversely, a low temperature results in a distribution that closely follows the optimal policy, resulting in more exploitation.
 
 ## Model of policies 
 
@@ -30,3 +42,9 @@ The main input to TrueGPT is a text prompt, which can be a sentence or a longer 
 TrueGPT has a number of potential applications, including text generation, text completion, and dialogue generation. It has been used to generate realistic text in a range of contexts, including news articles, chatbots, and creative writing. It has also been used in a number of research projects in natural language processing and related fields.
 
 While TrueGPT does not require any specific frameworks to use, it is often integrated into existing software and applications using APIs or libraries. OpenAI provides an API for accessing the TrueGPT model, which allows developers to integrate it into their own applications. Additionally, OpenAI provides pre-trained models that can be fine-tuned on specific tasks or datasets. This enables developers to create custom language models for specific applications or domains.
+
+
+# Desing 
+
+A Transformer learn of any x 
+
