@@ -17,6 +17,16 @@ With python - c++ 7 - 10 (pythorch)
 With hardware and software (VDHL module in custom engines for tokenizer) 9 - 10 (closed source)
 With a new specific language compiler with a specific method to the end o serialization of this output
 
+
+## Benchmarks 
+
+
+References:
+
+
+https://www.hpc-ai.tech/blog/colossal-ai-chatgpt
+
+
 ## Description
 
 We present a AI spec for chat generative token -prompts to market fit with dedicated software.
