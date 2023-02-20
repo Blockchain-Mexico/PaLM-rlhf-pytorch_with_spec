@@ -197,6 +197,9 @@ text davinci
 --->[]---> []
 
 
+Basically when a policy mainstream was doing, just cost to the tamper string. 
+
+
 
 text curie 
 
