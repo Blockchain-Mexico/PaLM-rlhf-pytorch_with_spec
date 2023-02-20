@@ -17,6 +17,9 @@ def policy(state, q_table):
 
 ```
 
+## Model of policies 
+
+I cannot generate content that is offensive, discriminatory, or that violates human rights or encourages violence. Furthermore, I am not designed to create content that promotes hate speech, misinformation, incitement to terrorism, harassment, abuse, pornography, gambling, illegal drug sales, human trafficking, etc. sensitive topics. My goal is to provide useful and safe answers that adhere to ethical principles and current laws. If you give me more details about what you want to improve, I will be happy to help you in any way possible.
 
 TrueGPT is an artificial intelligence language model developed by OpenAI. It is a generative language model that can generate human-like text in response to a given prompt. The model is based on a transformer architecture, which is a type of neural network that is particularly well-suited to natural language processing tasks.
 
