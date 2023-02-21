@@ -1,37 +1,47 @@
 #ifndef AUTOREGRESSIVE_TRANSFORMER_H
 #define AUTOREGRESSIVE_TRANSFORMER_H
 
-#include <vector>
+#include <Eigen/Dense>
+#include <functional>
 #include <string>
+#include <unordered_map>
+
+using ActivationFunction = std::function<Eigen::MatrixXd(const Eigen::MatrixXd&)>;
 
 class AutoregressiveTransformer {
 public:
-    AutoregressiveTransformer(int input_size, int hidden_size, int output_size, std::string activation_func);
-    void train(const std::vector<std::vector<double>>& X, const std::vector<std::vector<double>>& Y, int epochs);
-    std::vector<double> forward(const std::vector<double>& x);
+    AutoregressiveTransformer(int input_size, int hidden_size, int output_size, std::string activation_func, double learning_rate, int batch_size);
+
+    Eigen::MatrixXd forward(const Eigen::MatrixXd& X);
+    void backward(const Eigen::MatrixXd& X, const Eigen::MatrixXd& Y);
+
+    Eigen::MatrixXd get_W1() const { return W1; }
+    Eigen::MatrixXd get_b1() const { return b1; }
+    Eigen::MatrixXd get_W2() const { return W2; }
+    Eigen::MatrixXd get_b2() const { return b2; }
+    double get_learning_rate() const { return learning_rate; }
+    void set_learning_rate(double rate) { learning_rate = rate; }
 
 private:
-    double batch_size = 32;
-    double learning_rate = 0.001;
+    Eigen::MatrixXd softmax(const Eigen::MatrixXd& X);
+    Eigen::MatrixXd activation_deriv(const Eigen::MatrixXd& X);
 
     Eigen::MatrixXd W1;
-    Eigen::VectorXd b1;
+    Eigen::MatrixXd b1;
     Eigen::MatrixXd W2;
-    Eigen::VectorXd b2;
-
+    Eigen::MatrixXd b2;
     Eigen::MatrixXd dW1;
-    Eigen::VectorXd db1;
+    Eigen::MatrixXd db1;
     Eigen::MatrixXd dW2;
-    Eigen::VectorXd db2;
+    Eigen::MatrixXd db2;
+    Eigen::MatrixXd h1;
+    Eigen::MatrixXd A2;
 
-    Eigen::VectorXd h1;
-    Eigen::VectorXd h2;
+    ActivationFunction activation;
 
-    std::function<double(double)> activation;
     std::string activation_func;
-
-    void backward(const std::vector<double>& x, const std::vector<double>& grad);
-    void update_parameters();
+    double learning_rate;
+    int batch_size;
 };
 
-#endif // AUTOREGRESSIVE_TRANSFORMER_H
+#endif
