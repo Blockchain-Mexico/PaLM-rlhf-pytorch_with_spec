@@ -103,18 +103,14 @@ ostream& operator<<(ostream& os, const Tensor<A, B>& tensor) {
     return os;
 }
 
-class TensorParser {
-public:
-    Tensor<double, void> parse(string expression) {
-        tokens.clear();
-        tokenize(expression);
-
-        idx = 0;
-        auto tensor = parse_tensor();
-
-        return tensor;
+template <typename A, typename B>
+Tensor<A, B> TensorParser::parse_mult() {
+    auto tensor1 = parse_tensor();
+    if (current_token().value == "*") {
+        consume_token();
+        auto tensor2 = parse_mult<A, B>();
+        return make_tensor(TensorOp::Mult, tensor1, tensor2);
+    } else {
+        return tensor1;
     }
-
-private:
-    void tokenize(string expression) {
-        size_t
+}
