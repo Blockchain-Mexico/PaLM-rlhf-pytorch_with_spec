@@ -37,3 +37,9 @@ type 'a tensor is
 
 ```
 
+
+
+## References:
+
+https://dl.acm.org/doi/abs/10.1145/3315454.3329959
+
