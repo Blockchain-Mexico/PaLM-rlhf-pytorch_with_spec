@@ -2,6 +2,48 @@
 
 Basically the idea of having a stack cost of virtual tamper proofs that evaluates the posibility of:
 
+### Principals hints 
+
+Encode - Decode
+```
+the functions can be called from within the contract to encode data for use in Ethereum transactions and contracts.
+
+
+```
+
+Create models based on :
+
+ai desicions 
+```solidity
+// Import the Oracle contract
+import "./Oracle.sol";
+
+// Define the Tinygrad contract
+contract TinygradContract {
+    // Define a struct to represent the model parameters
+    struct ModelParams {
+        uint[] w1;
+        uint[] b1;
+        uint[] w2;
+        uint[] b2;
+    }
+
+    // Define a function that calls Tinygrad via the Oracle
+    function trainModel(uint[] memory x, uint[] memory y) public returns (ModelParams memory) {
+        // Get the Oracle contract address
+        Oracle oracle = Oracle(0x1234567890abcdef);
+
+        // Call the Oracle to train the model
+        (uint[] memory w1, uint[] memory b1, uint[] memory w2, uint[] memory b2) = oracle.trainModel(x, y);
+
+        // Return the trained model parameters
+        return ModelParams(w1, b1, w2, b2);
+    }
+}
+
+```
+the functions can be called from within the contract to encode data for use in Ethereum transactions and contracts.
+
 
 Here's an example of how you can use OpenAI's GPT-3 API to generate a text description of Ethereum:
 
@@ -230,3 +272,9 @@ text curie
 
 
 [] ---- [] --- []
+
+
+## References
+
+https://github.com/Philogy/create2-vickrey-contracts/tree/main/src/rlp
+
