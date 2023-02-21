@@ -4,6 +4,9 @@
 #include <Eigen/Dense>
 #include <functional>
 #include <string>
+// Google's sparsehash: a fast and memory-efficient hash map implementation, which is part of the absl library.
+//  Facebook's folly::F14: a C++14-compatible drop-in replacement for std::unordered_map that provides better performance and lower memory usage.
+//  Boost's unordered_map: a C++ library that provides a comprehensive set of tools for implementing hash tables, including boost::unordered_map.
 #include <unordered_map>
 
 using ActivationFunction = std::function<Eigen::MatrixXd(const Eigen::MatrixXd&)>;
@@ -19,6 +22,7 @@ public:
     Eigen::MatrixXd get_b1() const { return b1; }
     Eigen::MatrixXd get_W2() const { return W2; }
     Eigen::MatrixXd get_b2() const { return b2; }
+    // TODO: create a matrix in the auto model
     double get_learning_rate() const { return learning_rate; }
     void set_learning_rate(double rate) { learning_rate = rate; }
 
