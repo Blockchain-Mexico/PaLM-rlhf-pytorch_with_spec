@@ -4,6 +4,14 @@
 
 using ActivationFunction = std::function<Eigen::MatrixXd(const Eigen::MatrixXd&)>;
 
+namespace {
+    Eigen::MatrixXd softmax(const Eigen::MatrixXd& X) {
+        Eigen::MatrixXd shifted = X.rowwise() - X.colwise().maxCoeff();
+        Eigen::MatrixXd exp_shifted = shifted.array().exp();
+        return exp_shifted.array().rowwise() / exp_shifted.array().rowwise().sum();
+    }
+}
+
 Eigen::MatrixXd relu(const Eigen::MatrixXd& x) {
     return x.array().max(0.0);
 }
@@ -59,7 +67,6 @@ AutoregressiveTransformer::AutoregressiveTransformer(int input_size, int hidden_
 }
 
 Eigen::MatrixXd AutoregressiveTransformer::forward(const Eigen::MatrixXd& X) {
-// TODO: Find a better method
     h1 = W1 * X.colwise().replicate(batch_size) + b1.replicate(1, batch_size);
     Eigen::MatrixXd a1 = activation(h1);
     A2 = softmax(W2 * a1 + b2.replicate(1, batch_size));
@@ -74,9 +81,4 @@ void AutoregressiveTransformer::backward(const Eigen::MatrixXd& X, const Eigen::
     Eigen::MatrixXd dH1 = (W2.transpose() * dH2).array() * activation_deriv(h1).array();
     dW1 = dH1 * X.transpose();
     db1 = dH1.rowwise().sum();
-}
-
-Eigen::MatrixXd softmax(const Eigen::MatrixXd& X) {
-    Eigen::MatrixXd exp_scores = X.array().exp();
-    return exp_scores.array().rowwise() / exp_scores.array().rowwise().sum();
 }

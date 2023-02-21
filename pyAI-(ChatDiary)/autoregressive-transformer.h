@@ -4,48 +4,26 @@
 #include <Eigen/Dense>
 #include <functional>
 #include <string>
-// Google's sparsehash: a fast and memory-efficient hash map implementation, which is part of the absl library.
-//  Facebook's folly::F14: a C++14-compatible drop-in replacement for std::unordered_map that provides better performance and lower memory usage.
-//  Boost's unordered_map: a C++ library that provides a comprehensive set of tools for implementing hash tables, including boost::unordered_map.
 #include <unordered_map>
-
-using ActivationFunction = std::function<Eigen::MatrixXd(const Eigen::MatrixXd&)>;
 
 class AutoregressiveTransformer {
 public:
     AutoregressiveTransformer(int input_size, int hidden_size, int output_size, std::string activation_func, double learning_rate, int batch_size);
-
     Eigen::MatrixXd forward(const Eigen::MatrixXd& X);
     void backward(const Eigen::MatrixXd& X, const Eigen::MatrixXd& Y);
-
-    Eigen::MatrixXd get_W1() const { return W1; }
-    Eigen::MatrixXd get_b1() const { return b1; }
-    Eigen::MatrixXd get_W2() const { return W2; }
-    Eigen::MatrixXd get_b2() const { return b2; }
-    // TODO: create a matrix in the auto model
-    double get_learning_rate() const { return learning_rate; }
-    void set_learning_rate(double rate) { learning_rate = rate; }
-
+    void update();
 private:
-    Eigen::MatrixXd softmax(const Eigen::MatrixXd& X);
-    Eigen::MatrixXd activation_deriv(const Eigen::MatrixXd& X);
-
-    Eigen::MatrixXd W1;
-    Eigen::MatrixXd b1;
-    Eigen::MatrixXd W2;
-    Eigen::MatrixXd b2;
-    Eigen::MatrixXd dW1;
-    Eigen::MatrixXd db1;
-    Eigen::MatrixXd dW2;
-    Eigen::MatrixXd db2;
-    Eigen::MatrixXd h1;
-    Eigen::MatrixXd A2;
-
-    ActivationFunction activation;
-
-    std::string activation_func;
+    Eigen::MatrixXd W1, b1, W2, b2, dW1, db1, dW2, db2, h1, A2;
+    std::function<Eigen::MatrixXd(const Eigen::MatrixXd&)> activation;
+    std::function<Eigen::MatrixXd(const Eigen::MatrixXd&)> activation_deriv;
     double learning_rate;
     int batch_size;
+    std::string activation_func;
 };
 
-#endif
+Eigen::MatrixXd relu(const Eigen::MatrixXd& x);
+Eigen::MatrixXd sigmoid(const Eigen::MatrixXd& x);
+Eigen::MatrixXd elu(const Eigen::MatrixXd& x);
+Eigen::MatrixXd leaky_relu(const Eigen::MatrixXd& x);
+
+#endif // AUTOREGRESSIVE_TRANSFORMER_H
