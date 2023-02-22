@@ -5,7 +5,7 @@ Disclaimer see this as davinci read letters.
 Grammar gap 
 
 GADT grammar for a tensor language:
-
+The Tensor class uses a recursive approach to represent an expression tree, where each node is either a scalar value, a variable, or an operation.
 ```
 type ('a, 'b) tensor =
   | Scalar    : float -> ('a, 'a) tensor
